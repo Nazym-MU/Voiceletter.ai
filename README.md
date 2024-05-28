@@ -28,7 +28,7 @@ This tool utilizes advanced AI technologies to streamline news consumption, maki
 
 ## Video Walkthrough
 
-YouTube: []
+[YouTube Link][https://youtu.be/0Y_dk_SRzt0]
 
 ## Technologies Used
 
@@ -46,7 +46,7 @@ YouTube: []
 Follow these steps to get your development environment set up:
 
 1. **Clone the repository**
-git clone https://github.com/your-username/news-query-processor.git
+git clone https://github.com/Nazym-MU/Voiceletter.ai.git
 cd Voiceletter.ai
 
 2. **Install Dependencies**

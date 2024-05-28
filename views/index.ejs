@@ -31,6 +31,8 @@
                         <!-- Information about news item (play button, title, delete action) -->
                         <div class="meta-info">
                             <button onclick="playAudio('<%= news.id %>')"><i class="fas fa-play"></i></button>
+                            <button onclick="pauseAudio('<%= news.id %>')"><i class="fas fa-pause"></i></button>
+                            <button onclick="stopAudio('<%= news.id %>')"><i class="fas fa-stop"></i></button>
                             <small><%= news.title %></small>
                             <div class="actions">
                                 <!-- Link to delete news item -->
@@ -50,10 +52,38 @@
 
     <!-- JavaScript to play audio for news items -->
     <script>
+        var currentAudio = null;
+    
         function playAudio(newsId) {
-            const audio = new Audio(`/synthesize/${newsId}`);
-            audio.play().catch(error => console.error('Error playing audio:', error));
+            // Stop currently playing audio if it exists and is different
+            if (currentAudio && currentAudio.newsId !== newsId) {
+                currentAudio.audio.pause();
+                currentAudio.audio.currentTime = 0;
+            }
+    
+            // Play new audio
+            if (!currentAudio || currentAudio.newsId !== newsId) {
+                const audio = new Audio(`/synthesize/${newsId}`);
+                audio.play().catch(error => console.error('Error playing audio:', error));
+                currentAudio = { audio, newsId };
+            } else {
+                currentAudio.audio.play();
+            }
+        }
+    
+        function pauseAudio(newsId) {
+            if (currentAudio && currentAudio.newsId === newsId) {
+                currentAudio.audio.pause();
+            }
+        }
+    
+        function stopAudio(newsId) {
+            if (currentAudio && currentAudio.newsId === newsId) {
+                currentAudio.audio.pause();
+                currentAudio.audio.currentTime = 0;
+            }
         }
     </script>
+    
 </body>
 </html>
