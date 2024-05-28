@@ -46,11 +46,15 @@ This tool utilizes advanced AI technologies to streamline news consumption, maki
 Follow these steps to get your development environment set up:
 
 1. **Clone the repository**
+```
 git clone https://github.com/Nazym-MU/Voiceletter.ai.git
 cd Voiceletter.ai
+```
 
 2. **Install Dependencies**
+```
 npm install
+```
 
 3. **Set up the table**
 Check setup.sql file for setting up the table in your database. There is 1 table in this project.
@@ -58,6 +62,7 @@ Check setup.sql file for setting up the table in your database. There is 1 table
 4. **Configure Environment Variables**
 Create a `.env` file in the root directory and provide the necessary API keys and database configuration:
 
+```
 DB_HOST=localhost
 DB_USER=myuser
 DB_DATABASE=mydatabase
@@ -65,9 +70,12 @@ DB_PASSWORD=mypassword
 DB_PORT=5432
 BING_NEWS_API_KEY=your_bing_api_key
 OPENAI_API_KEY=your_openai_api_key
+```
 
 5. **Start the Application**
+```
 node index.js
+```
 Access the application through `http://localhost:3000` in your web browser.
 
 ## API Endpoints
