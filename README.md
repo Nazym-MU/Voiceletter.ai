@@ -28,7 +28,7 @@ This tool utilizes advanced AI technologies to streamline news consumption, maki
 
 ## Video Walkthrough
 
-[YouTube Link][https://youtu.be/0Y_dk_SRzt0]
+[YouTube Link](https://youtu.be/2Zs_uZtXLyg)
 
 ## Technologies Used
 
