@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <!-- Basic Meta Tags -->
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>News</title>
+
+  <!-- Stylesheets -->
+  <link rel="stylesheet" href="/styles/main.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+
+  <!-- Scripts -->
+  <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+</head>
+ 
+<body>
+    <!-- Header Section -->
+    <div class="title-container">
+        <h1 style="margin-top: 50px;">News summarized</h1>
+    </div>
+
+    <!-- Main Content Container -->
+    <div class="container">
+        <!-- News List Display -->
+        <ul id="newsList">
+            <!-- Loop through each news item and display it -->
+            <% newsList.forEach(news => { %>
+                <li class="news-item">
+                    <div class="news-container">
+                        <!-- Information about news item (play button, title, delete action) -->
+                        <div class="meta-info">
+                            <button onclick="playAudio('<%= news.id %>')"><i class="fas fa-play"></i></button>
+                            <small><%= news.title %></small>
+                            <div class="actions">
+                                <!-- Link to delete news item -->
+                                <a href="/delete/<%= news.id %>" style="color: #333;"><i class="fas fa-trash-alt"></i></a>
+                            </div>
+                        </div>
+                    </div>
+                </li>
+            <% }); %>
+        </ul>
+        <!-- Form to submit a new news query -->
+        <form action="/query" id="newsQueryForm" method="post">
+            <input type="text" id="title" name="title" placeholder="Enter news topic" required>
+            <button class="add" type="submit"><i class="fas fa-paper-plane"></i></button>
+        </form>
+    </div>
+
+    <!-- JavaScript to play audio for news items -->
+    <script>
+        function playAudio(newsId) {
+            const audio = new Audio(`/synthesize/${newsId}`);
+            audio.play().catch(error => console.error('Error playing audio:', error));
+        }
+    </script>
+</body>
+</html>
