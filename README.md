@@ -98,8 +98,8 @@ If you're interested in contributing to Voiceletter.ai, here are a few ways you 
 - nFactorial LLM Cup 2024: Thanks to the nFactorial 2024 hackathon, where the initial idea for this project was developed.
 
 ## Useful Resources & Links
-Node.js Documentation: [Visit Node.js](https://nodejs.org/en)
-Express.js Guide: [Learn about Express](https://expressjs.com/)
-PostgreSQL: [PostgreSQL Docs](https://www.postgresql.org/docs/)
-OpenAI API Documentation: [OpenAI APIs](https://platform.openai.com/docs/)
-GitHub Repository: [Voiceletter.ai GitHub](https://github.com/Nazym-MU/Voiceletter.ai)
+- Node.js Documentation: [Visit Node.js](https://nodejs.org/en)
+- Express.js Guide: [Learn about Express](https://expressjs.com/)
+- PostgreSQL: [PostgreSQL Docs](https://www.postgresql.org/docs/)
+- OpenAI API Documentation: [OpenAI APIs](https://platform.openai.com/docs/)
+- GitHub Repository: [Voiceletter.ai GitHub](https://github.com/Nazym-MU/Voiceletter.ai)
