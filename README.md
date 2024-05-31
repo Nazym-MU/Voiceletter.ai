@@ -4,11 +4,9 @@
 
 Voiceletter.ai is a web application built with Node.js and Express that allows users to query news articles, automatically summarize them, and manage these summaries in a database. It integrates external APIs for news fetching and text synthesis, enhancing the user experience by providing synthesized voice outputs of news summaries. It's a web version of the iOS app I developed during the nFactorial 2024 hackathon. 
 
-## Problem Description
+## Problem Description and Solution
 
-Today, staying updated with the latest news is essential but it takes a lot of time to search, read, evaluate, and process it. 
-
-## Solution
+Today, staying updated with the latest news is essential but it takes a lot of time to search, read, evaluate, and process it.
 
 Voiceletter.ai addresses these challenges by providing:
 
@@ -83,3 +81,25 @@ Access the application through `http://localhost:3000` in your web browser.
 - **POST `/query`**: Submit a query to fetch and summarize news.
 - **GET `/synthesize/:id`**: Retrieve synthesized speech of a news summary by ID.
 - **GET `/delete/:id`**: Delete a specific news summary.
+
+
+## Further Development and Contribution Guidelines
+
+### Contributing to Voiceletter.ai
+If you're interested in contributing to Voiceletter.ai, here are a few ways you can contribute:
+- Report issues and bugs on our GitHub issues page.
+- Suggest new features or improvements to existing ones.
+- Submit pull requests with new code, including new features or bug fixes.
+### Development Guidelines
+- Add tests for new features and ensure all tests pass before submitting a pull request.
+- Update documentation to reflect any changes in functionality or setup instructions as part of your pull requests.
+
+## Acknowledgements
+- nFactorial LLM Cup 2024: Thanks to the nFactorial 2024 hackathon, where the initial idea for this project was developed.
+
+## Useful Resources & Links
+Node.js Documentation: [Visit Node.js](https://nodejs.org/en)
+Express.js Guide: [Learn about Express](https://expressjs.com/)
+PostgreSQL: [PostgreSQL Docs](https://www.postgresql.org/docs/)
+OpenAI API Documentation: [OpenAI APIs](https://platform.openai.com/docs/)
+GitHub Repository: [Voiceletter.ai GitHub](https://github.com/Nazym-MU/Voiceletter.ai)
